@@ -1,0 +1,63 @@
+Exp No: 5
+
+Date:
+
+Python Program Using Dictionary Manipulations
+
+Aim
+
+Implement programs using Dictionary Manipulations
+
+1)
+
+Create a dictionary with key are month numbers and values are month names
+
+11) Print all Key values.
+
+Print all key values.
+
+IV)
+
+Update Key [11] as Nov and Print all key values.
+
+V)
+
+Delete Key [5] and Print all key values.
+
+Program
+
+months = {1: "January", 2: "February",3: "March", 4: "April", 5: "May", 6: "June", 7: "July",
+
+8: "
+
+August", 9: "September", 10: "October", 11: "November",
+
+12: "December" }
+
+print ("The dictionary contains the following keys: ", months.keys())
+
+print ('all values')
+
+for key in months:
+
+print (key, months[key])
+
+months[11] = "Nov"
+
+print ('After modifying all values')
+
+for key in months:
+
+print (key, months[key])
+
+del months[5]
+
+print ('After deletion all values')
+
+for key in months:
+
+print (key, months[key])
+
+Result
+
+Python programs using Dictionary executed successfully and output obtained.
