@@ -1,0 +1,177 @@
+Exp No : 6
+
+Date : 
+
+Python Program Using Function
+
+Aim
+
+I. Write a python program to find factorial of a number using Recursion.
+
+II. Write a Python function to multiply all the numbers in a list.
+
+III. Write a Python function that accepts a string and counts the number of upper and lower case 
+
+letters.
+
+Program I
+
+def recur_fact(n):
+
+ if n == 1:
+
+ return n
+
+ else:
+
+ return n*recur_fact(n-1)
+
+num = int(input("Enter a number: "))
+
+if num < 0:
+
+ print("Sorry, factorial does not exist for negative numbers")
+
+elif num == 0:
+
+ print("The factorial of 0 is 1")
+
+else:
+
+ print("The factorial of",num,"is",recur_fact(num))
+
+Program II
+
+def multiply(numbers): 
+
+ total = 1
+
+ for x in numbers:
+
+ total *= x 
+
+ return total 
+
+print(multiply((8, 2, 3, -1, 7)))
+
+Program III
+
+def string_test(s):
+
+ d={"UPPER_CASE":0, "LOWER_CASE":0}
+
+ for c in s:
+
+ if c.isupper():
+
+ d["UPPER_CASE"]+=1
+
+ elif c.islower():
+
+ d["LOWER_CASE"]+=1
+
+ else:
+
+ pass
+
+ print ("Original String : ", s)
+
+ print ("No. of Upper case characters : ", d["UPPER_CASE"])
+
+ print ("No. of Lower case Characters : ", d["LOWER_CASE"])
+
+string_test('The quick Brown Fox')
+
+Result 
+
+Python scripts using functions executed successfully and output obtained.
+
+Exp No : 6
+
+Date : 
+
+Python Program Using Function
+
+Aim
+
+I) Write a python program to define a module to find Fibonacci Numbers and import the module 
+
+to another program.
+
+II) Write a python program to define a module and import a specific function in that module to 
+
+another program.
+
+Program I :
+
+fibonacci.py
+
+# Fibonacci numbers module
+
+def fib(n): # write Fibonacci series up to n
+
+ a, b = 0, 1
+
+ while b < n:
+
+ print(b, end =" ")
+
+ a, b = b, a+b
+
+ week14.py
+
+#import fibonacci module
+
+import fibonacci 
+
+num=int(input("Enter any number to print Fibonacci series "))
+
+fibonacci.fib(num)
+
+Program II :
+
+arth.py
+
+''' Arithmetic Operations Module with Multiple functions'''
+
+def Add(a,b):
+
+ c=a+b
+
+ return c
+
+def Sub(a,b):
+
+ c=a-b
+
+ return c
+
+def Mul(a,b):
+
+ c=a*b
+
+ return c
+
+print("Version Information is:") 
+
+print(sys.version_info)
+
+week15.py
+
+'''Write a python program to define a module and import a specific function in that
+
+module to another program.'''
+
+from arth import Add
+
+num1=float(input("Enter first Number : "))
+
+num2=float(input("Enter second Number : "))
+
+print("Addition is : ",Add(num1,num2))
+
+print("Subtraction is : ",Sub(num1,num2))
+
+Result 
+
+Python scripts using modules executed successfully and output obtained.
