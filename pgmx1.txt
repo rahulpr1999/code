@@ -1,0 +1,103 @@
+Python Program Using Regular Expression
+Aim
+Implement programs using packages
+I. Generate a random alphabetical character, string and alphabetical strings of a fixed length.
+II. Write a Python program to create a list of random integers and randomly select multiple items 
+from the list.
+Program I
+import random
+import string
+print("Generate a random alphabetical character:")
+print(random.choice(string.ascii_letters))
+print("\nGenerate a random alphabetical string:")
+max_length = 255
+str1 = ""
+for i in range(random.randint(1, max_length)):
+ str1 += random.choice(string.ascii_letters)
+print(str1)
+print("\nGenerate a random alphabetical string of a fixed length:")
+str1 = ""
+for i in range(10):
+ str1 += random.choice(string.ascii_letters)
+print(str1)
+Program II
+import random 
+print("Create a list of random integers:")
+population = range(0, 100)
+nums_list = random.sample(population, 10)
+print(nums_list)
+no_elements = 4
+print("\nRandomly select",no_elements,"multiple items from the said list:")
+result_elements = random.sample(nums_list, no_elements)
+print(result_elements)
+no_elements = 8
+print("\nRandomly select",no_elements,"multiple items from the said list:")
+result_elements = random.sample(nums_list, no_elements)
+print(result_elements)
+
+Result
+The python scripts using packeges are run successfully and output obtained.
+Exp No : 10
+Date : 
+Python Program Using Regular Expression
+Aim
+Implement programs using regular expression
+III. Write a Python program to check that a string contains only a certain set of characters (in this 
+case a-z, A-Z and 0-9)
+IV. Write a Python program that matches a string that has an a followed by one or more b's.
+V. Write a Python program to find sequences of lowercase letters joined by an underscore.
+VI. Write a Python program that matches a word containing 'z', not the start or end of the word.
+VII. Write a Python program to match a string that contains only upper and lowercase letters, 
+numbers, and underscores.
+Program I
+import re
+def is_allowed_specific_char(string):
+ charRe = re.compile(r'[^a-zA-Z0-9]')
+ string = charRe.search(string)
+ return not bool(string)
+print(is_allowed_specific_char("ABCDEFabcdef123450"))
+print(is_allowed_specific_char("*&%@#!}{"))
+Program II
+import re
+def text_match(text):
+ patterns = 'ab+?'
+ if re.search(patterns, text):
+ return 'Found a match!'
+ else:
+ return('Not matched!')
+print(text_match("ab"))
+print(text_match("abc"))
+Program III
+
+import re
+def text_match(text):
+ patterns = '^[a-z]+_[a-z]+$'
+ if re.search(patterns, text):
+ return 'Found a match!'
+ else:
+ return('Not matched!')
+print(text_match("aab_cbbbc"))
+print(text_match("aab_Abbbc"))
+print(text_match("Aaab_abbbc"))
+Program IV
+import re
+def text_match(text):
+ patterns = '\Bz\B'
+ if re.search(patterns, text):
+ return 'Found a match!'
+ else:
+ return('Not matched!')
+print(text_match("The quick brown fox jumps over the lazy dog."))
+print(text_match("Python Exercises."))
+Program V
+import re
+def text_match(text):
+ patterns = '^[a-zA-Z0-9_]*$'
+ if re.search(patterns, text):
+ return 'Found a match!'
+ else:
+ return('Not matched!')
+print(text_match("The quick brown fox jumps over the lazy dog."))
+print(text_match("Python_Exercises_1"))
+Result
+The python scripts for regular expression are run successfully and output obtained.
